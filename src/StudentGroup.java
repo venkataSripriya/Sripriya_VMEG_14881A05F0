@@ -12,7 +12,7 @@ import java.util.Date;
  *
  */
 public class StudentGroup implements StudentArrayOperation {
-	
+
 	private Student[] students;
 	
 	/**
@@ -23,146 +23,116 @@ public class StudentGroup implements StudentArrayOperation {
 		this.students = new Student[length];
 	}
 
+	
+
+	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
-		return null;
+		if(students!=null)
+			return students;
+		else
+			return null;
+		
 	}
 
+	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
 		if(students==null)
-		{
-			throw new IllegalArgumentException();
-		}
-		else{
-			this.students=students;
-		}
-	
+			{throw new IllegalArgumentException();}
+		else
+			{this.students=students;}
 	}
 
-
-	public Student getStudent(int index) {
-		// Add your implementation here
-		return null;
-		
-	}
-
-	public void setStudent(Student student, int index) {
-		// Add your implementation here
-		students[index]=student;
-	}
-
-	
+	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
-		
 	}
 
-
+	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
-	    students[students.length+1]=student;
 	}
 
-
+	@Override
 	public void add(Student student, int index) {
-		
+		// Add your implementation here
 	}
 
+	@Override
 	public void remove(int index) {
 		// Add your implementation here
-		for(int i=index;i<students.length;i++)
-		{
-			students[i]=students[i+1];
-		}
-		
 	}
 
-
+	@Override
 	public void remove(Student student) {
 		// Add your implementation here
-		
-	
 	}
 
-
+	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
-	
 	}
 
+	@Override
 	public void removeFromElement(Student student) {
 		// Add your implementation here
+	}
 
-							
-}
-
-
+	@Override
 	public void removeToIndex(int index) {
 		// Add your implementation here
-		
-		for(int i=0;i<students.length;i++)
-		{
-			if(i+index>students.length)
-			{
-				break;
-			}
-			students[i]=students[i+index];
-		}
-	
 	}
 
-	
+	@Override
 	public void removeToElement(Student student) {
 		// Add your implementation here
-	
 	}
 
-
+	@Override
 	public void bubbleSort() {
 		// Add your implementation here
-	
 	}
 
+	@Override
 	public Student[] getByBirthDate(Date date) {
 		// Add your implementation here
 		return null;
 	}
 
-
+	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
 		return null;
 	}
 
-	
+	@Override
 	public Student[] getNearBirthDate(Date date, int days) {
 		// Add your implementation here
 		return null;
 	}
 
-
+	@Override
 	public int getCurrentAgeByDate(int indexOfStudent) {
 		// Add your implementation here
 		return 0;
 	}
 
-
+	@Override
 	public Student[] getStudentsByAge(int age) {
-		
+		// Add your implementation here
 		return null;
 	}
 
-	
+	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
 		return null;
 	}
 
-	
+	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
 		return null;
-		
 	}
 }
