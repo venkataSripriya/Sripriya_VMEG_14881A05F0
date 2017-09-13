@@ -11,7 +11,7 @@ import java.util.Date;
  * DO NOT PUT any classes into packages
  *
  */
-public class StudentGroup implements StudentArrayOperation {
+public abstract class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
 	
